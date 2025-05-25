@@ -9,7 +9,7 @@ export default defineConfig({
     emptyOutDir: false,
     rollupOptions: {
       input: {
-        popup: path.resolve(__dirname, "src/App.tsx"),
+        popup: path.resolve(__dirname, "src/extension/Popup.tsx"),
         viewer: path.resolve(__dirname, "src/App.tsx")
       },
       output: {

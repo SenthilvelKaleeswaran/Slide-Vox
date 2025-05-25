@@ -1,1 +1,1 @@
-import"./popup.js";
+import"./index-BWFZKfll.js";
