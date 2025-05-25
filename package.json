@@ -1,0 +1,15 @@
+{
+  "name": "slide-vox",
+  "main": "index.js",
+  "version": "1.0.0",
+  "description": "SlideVox: Converts chats to PPT slides with a 3D speaking character",
+  "scripts": {
+    "build": "cd frontend && npm run build && cd /scripts && node build.js",
+    "start:backend": "cd backend && npm run dev",
+    "start:frontend": "cd frontend && npm run dev",
+    "start": "npm run start:backend & npm run start:frontend"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

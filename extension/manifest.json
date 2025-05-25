@@ -1,0 +1,17 @@
+{
+    "manifest_version": 3,
+    "name": "Slide Vox",
+    "version": "1.0",
+    "description": "Converts chats to PPT slides with a 3D speaking character.",
+    "permissions": [
+        "activeTab",
+        "tabs",
+        "scripting"
+      ],
+      "action": {
+        "default_popup": "popup.html"
+      },
+      "background": {
+    "service_worker": "background.js"
+  }
+}
