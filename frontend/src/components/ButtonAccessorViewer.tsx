@@ -7,7 +7,7 @@ export default function ButtonAccessorViewer() {
 
   const [data , setData] = useState<any>(null);
 
-  const handleSlidesConversion = () => {
+  const handleSlidesConversion = async () => {
     if (ref.current) {
       console.log(ref.current);
       const currentDiv = ref.current;
@@ -16,12 +16,14 @@ export default function ButtonAccessorViewer() {
       const messageId = messageDiv?.getAttribute("data-message-id");
       const messageContent: any = messageDiv?.querySelector(".markdown");
 
-      const data = createSlides({
+      const data = await createSlides({
         messageId,
         data: messageContent?.innerText ?? "",
         model: "gpt-4.0",
         platform : "chatgpt",
       });
+
+      console.log({response :data});
 
       setData(data);
 

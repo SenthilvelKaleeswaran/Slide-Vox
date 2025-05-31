@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = 'http://localhost:5000';
+const BASE_URL = 'https://g2pxfjv2-5000.inc1.devtunnels.ms';
 const DEFAULT_TIMEOUT = 10000;
 const RETRY_COUNT = 0;
 
