@@ -1,4 +1,5 @@
-import IconButton from "./ui/IconVariants";
+import IconButtonWithLoader from "../../lib/components/ui/IconVariants";
+
 export default function ButtonAccessorViewer() {
   const handleSlidesConversion = () => {
     console.log("Convert button clicked");
@@ -6,8 +7,8 @@ export default function ButtonAccessorViewer() {
 
   return (
     <div className="flex gap-2">
-      <IconButton name="SlidesIcon" onClick={handleSlidesConversion} />
-      <IconButton name="VoxIcon" onClick={handleSlidesConversion} />
+      <IconButtonWithLoader isLoading={false} name="SlidesIcon" onClick={handleSlidesConversion} />
+      <IconButtonWithLoader isLoading={false} name="VoxIcon" onClick={handleSlidesConversion} />
     </div>
   );
 }
