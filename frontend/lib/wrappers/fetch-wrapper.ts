@@ -1,4 +1,3 @@
-// fetchWrapper.js
 import axios from 'axios';
 
 const BASE_URL = 'https://api.example.com';
@@ -12,7 +11,6 @@ const fetchWrapper = async (method, url, body = null, options = {}, retries = RE
     ...((options as { headers?: Record<string, string> }).headers || {}),
   };
 
-  // Request interceptor logic (example: add auth token)
   const token = localStorage.getItem('token');
   if (token) {
     headers['Authorization'] = `Bearer ${token}`;
@@ -37,7 +35,6 @@ const fetchWrapper = async (method, url, body = null, options = {}, retries = RE
       return fetchWrapper(method, url, body, options, retries - 1);
     }
 
-    // Re-throw with custom error message
     throw {
       message: error.response?.data?.message || error.message,
       status: error.response?.status,
