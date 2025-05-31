@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = 'https://api.example.com';
+const BASE_URL = 'http://localhost:5000';
 const DEFAULT_TIMEOUT = 10000;
 const RETRY_COUNT = 0;
 
@@ -8,7 +8,7 @@ const fetchWrapper = async (method, url, body = null, options = {}, retries = RE
   const headers = {
     'Content-Type': 'application/json',
     Accept: 'application/json',
-    ...((options as { headers?: Record<string, string> }).headers || {}),
+    // ...((options as { headers?: Record<string, string> }).headers || {}),
   };
 
   const token = localStorage.getItem('token');
@@ -28,7 +28,7 @@ const fetchWrapper = async (method, url, body = null, options = {}, retries = RE
   try {
     const response = await axios(config);
     return response.data;
-  } catch (error) {
+  } catch (error :any) {
     const isRetryable = error.code === 'ECONNABORTED' || error.response?.status >= 500;
 
     if (retries > 0 && isRetryable) {

@@ -8,7 +8,7 @@ const URL_CHATGPT: Website = "https://chatgpt.com";
 const websites: Website[] = [URL_CHATGPT];
 
 const websiteSelector: MessageSelectorMap = {
-  [URL_CHATGPT]: 'div[data-message-author-role="user"][data-message-id]',
+  [URL_CHATGPT]: 'div[data-message-author-role="assistant"][data-message-id]',
 };
 
 function debounce<T extends (...args: unknown[]) => void>(func: T, wait: number): (...args: Parameters<T>) => void {
