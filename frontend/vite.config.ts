@@ -10,7 +10,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         popup: path.resolve(__dirname, "src/extension/Popup.tsx"),
-        viewer: path.resolve(__dirname, "src/App.tsx")
+        'button-accessor': path.resolve(__dirname, "src/extension/ButtonAccessor.tsx")
       },
       output: {
         entryFileNames: "[name].js",

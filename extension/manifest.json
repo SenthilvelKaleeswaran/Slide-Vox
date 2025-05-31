@@ -7,11 +7,23 @@
         "activeTab",
         "tabs",
         "scripting"
-      ],
-      "action": {
+    ],
+    "action": {
         "default_popup": "popup.html"
-      },
-      "background": {
-    "service_worker": "background.js"
-  }
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://chatgpt.com/*"],
+            "js": ["content.js"],
+            "css": ["css/popup.css", "css/viewer.css"],
+            "run_at": "document_start"
+        }
+    ],
+    "web_accessible_resources": [{
+        "resources": ["button-accessor.js", "*.js"],
+        "matches": ["https://chatgpt.com/*"]
+    }]
 }

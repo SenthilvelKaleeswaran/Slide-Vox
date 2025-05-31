@@ -1,0 +1,1 @@
+export const URL_CHATGPT = 'https://chatgpt.com';
