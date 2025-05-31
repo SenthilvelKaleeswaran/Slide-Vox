@@ -5,11 +5,14 @@
   "description": "SlideVox: Converts chats to PPT slides with a 3D speaking character",
   "scripts": {
     "build": "cd frontend && npm install && npm run build && cd /scripts && node build.js",
-    "start:backend": "cd backend && npm run dev",
+    "start:backend": "cd backend && node server.js",
     "start:frontend": "cd frontend && npm run dev",
     "start": "npm run start:backend & npm run start:frontend"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
 }
