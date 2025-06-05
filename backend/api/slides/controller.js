@@ -11,7 +11,7 @@ const getAllSlides = async (req, res) => {
 
 const getSlideById = async (req, res) => {
   try {
-    const slide = await slideService.getSlideById(req.params.id);
+    const slide = await slideService.getSlideByConversationId(req.params.conversationId);
     if (!slide) {
       return res.status(404).json({ message: 'Slide not found' });
     }

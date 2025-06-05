@@ -4,7 +4,10 @@ const SlideSchema = new mongoose.Schema({
   messageId: {
     type: String,
     required: true,
-    unique: true
+  },
+  conversationId: {
+    type: String,
+    required: true,
   },
   data: {
     type: String,

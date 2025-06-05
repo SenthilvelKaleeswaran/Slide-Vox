@@ -16,6 +16,14 @@ const getSlideById = async (id) => {
   }
 };
 
+const getSlideByConversationId = async (id) => {
+  try {
+    return await Slide.find({conversationId: id});
+  } catch (error) {
+    throw new Error('Failed to fetch slide by ID');
+  }
+};
+
 const createSlide = async (slideData) => {
   try {
     const slide = new Slide(slideData);
@@ -44,6 +52,7 @@ const deleteSlide = async (id) => {
 module.exports = {
   getAllSlides,
   getSlideById,
+  getSlideByConversationId,
   createSlide,
   updateSlide,
   deleteSlide,

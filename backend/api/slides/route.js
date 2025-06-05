@@ -5,7 +5,7 @@ const slideController = require('./controller');
 
 router.get('/', slideController.getAllSlides);
 
-router.get('/:id', slideController.getSlideById);
+router.get('/:conversationId', slideController.getSlideById);
 
 router.post('/', slideController.createSlide);
 
