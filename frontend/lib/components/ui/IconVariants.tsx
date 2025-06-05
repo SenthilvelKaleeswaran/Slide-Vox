@@ -33,7 +33,8 @@ export default function IconButtonWithLoader({
   [key: string]: unknown;
 }) {
   if (isLoading) {
-    return <LoaderIcon />;
+
+    return <div className="p-2"><LoaderIcon /></div>;
   }
   return <IconButton {...rest} />;
 }

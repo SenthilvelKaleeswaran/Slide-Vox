@@ -8,7 +8,7 @@ export const createSlides = (data: any) => {
       type: "generateSlides",
       payload: data,
     },
-    "*"
+    window.location.origin 
   );
 };
 
