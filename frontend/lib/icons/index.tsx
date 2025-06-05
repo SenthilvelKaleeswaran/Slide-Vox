@@ -2,6 +2,7 @@ import * as React from "react";
 import { SlidesIcon } from "./collections/SlidesIcon";
 import { VoxIcon } from "./collections/VoxIcon";
 import { LoaderIcon } from "./collections/LoaderIcon";
+import { SwitchIcon } from "./collections/SwitchIcon";
 
 // Define the type for the icon map
 type IconMap = {
@@ -12,6 +13,7 @@ type IconMap = {
 const iconMap: IconMap = {
   LoaderIcon,
   SlidesIcon,
+  SwitchIcon,
   VoxIcon,
 };
 
